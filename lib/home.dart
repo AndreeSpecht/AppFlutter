@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/sharehome.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -65,12 +66,17 @@ class Home extends StatelessWidget {
               ),
               const SizedBox(height: 10),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Sharehome()),
+                  );
+                },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.black,
                 ),
                 child: const Text(
-                  "Esqueci a minha senha",
+                  "Tela de formulario",
                   style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
@@ -129,7 +135,6 @@ class Home extends StatelessWidget {
     );
   }
 }
-
 void main() {
   runApp(const MaterialApp(
     home: Home(),
