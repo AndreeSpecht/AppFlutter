@@ -8,7 +8,7 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("App Bar"),
+        title: const Text("Breathe"),
       ),
       body: SingleChildScrollView(
         child: Center(
@@ -135,6 +135,7 @@ class Home extends StatelessWidget {
     );
   }
 }
+
 void main() {
   runApp(const MaterialApp(
     home: Home(),
