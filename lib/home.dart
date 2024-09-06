@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:myapp/sharehome.dart';
+import 'package:myapp/legal.dart';
+import 'package:myapp/alertButton.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -26,22 +29,14 @@ class Home extends StatelessWidget {
                   color: Colors.black,
                 ),
               ),
-              const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                child: Text(
-                  "Não há nada mais contagiante do que a alegria de um cachorrinho. Com seus rabinhos abanando, olhos brilhantes e uma energia inesgotável, eles transformam qualquer ambiente em um lugar mais feliz. Seja correndo atrás de uma bola, brincando com uma folha caída ou apenas pulando de felicidade ao ver seus donos, os cachorrinhos são mestres em espalhar sorrisos.",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 16),
-                ),
-              ),
               const SizedBox(height: 20),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () => Get.to(Legal()),
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.black,
                 ),
                 child: const Text(
-                  "Login",
+                  "Tela do Forms",
                   style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
@@ -51,12 +46,12 @@ class Home extends StatelessWidget {
               ),
               const SizedBox(height: 10),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () => Get.to(Sharehome()),
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.black,
                 ),
                 child: const Text(
-                  "Cadastre-se",
+                  "Tela não sei",
                   style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
@@ -66,17 +61,12 @@ class Home extends StatelessWidget {
               ),
               const SizedBox(height: 10),
               ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => Sharehome()),
-                  );
-                },
+                onPressed: () => Get.to(AlertButton()),
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.black,
                 ),
                 child: const Text(
-                  "Tela de formulario",
+                  "Tela de Alert",
                   style: TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
@@ -84,50 +74,7 @@ class Home extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(height: 20),
-              const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                child: Text(
-                  "Desde cedo, os cachorrinhos demonstram uma lealdade impressionante. Eles seguem seus donos por todos os lados, atentos a cada movimento, prontos para oferecer companhia e conforto. Mesmo quando ainda estão aprendendo sobre o mundo ao seu redor, essa lealdade natural é uma característica marcante, que se fortalece à medida que crescem e se tornam verdadeiros amigos para todas as horas.",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 16),
-                ),
-              ),
-              const SizedBox(height: 20),
-              const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
-                child: Text(
-                  "Para um cachorrinho, o mundo é um lugar cheio de maravilhas e descobertas. Cada canto da casa, cada som novo, cada pessoa diferente é uma oportunidade para aprender e explorar. É divertido observar como eles investigam tudo com o focinho, testando o que é seguro, o que cheira bem, e o que faz barulho. Essas pequenas aventuras diárias são parte do que torna a convivência com um cachorrinho tão encantadora e divertida.",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 16),
-                ),
-              ),
-              const SizedBox(height: 20),
-              const Text(
-                "Texto em Negrito e Sublinhado",
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                  decoration: TextDecoration.underline,
-                ),
-              ),
-              const SizedBox(height: 20),
-              const Text(
-                "Texto em Itálico e Azul",
-                style: TextStyle(
-                  fontSize: 20,
-                  fontStyle: FontStyle.italic,
-                  color: Colors.blue,
-                ),
-              ),
-              const SizedBox(height: 20),
-              const Text(
-                "Texto com Tamanho Aumentado",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 28,
-                ),
-              ),
+              const SizedBox(height: 10),
             ],
           ),
         ),
